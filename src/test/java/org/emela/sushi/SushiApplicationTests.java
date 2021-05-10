@@ -1,4 +1,4 @@
-package com.emela.sushi;
+package org.emela.sushi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
