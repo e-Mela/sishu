@@ -2,27 +2,21 @@ package org.emela.sushi.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
-import org.emela.sushi.model.Item;
-
 
 /**
- * ItemDetailRequest
+ * ItemDetailResponse
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-05-12T21:47:58.540008-04:00[America/New_York]")
 
-public class ItemDetailRequest   {
+public class ItemDetailResponse   {
   @JsonProperty("item-id")
   private String itemId = null;
 
-  @JsonProperty("items")
-  private List<Item> items = new ArrayList<>();
+  @JsonProperty("item")
+  private Item item = null;
 
-  public ItemDetailRequest itemId(String itemId) {
+  public ItemDetailResponse itemId(String itemId) {
     this.itemId = itemId;
     return this;
   }
@@ -42,28 +36,23 @@ public class ItemDetailRequest   {
     this.itemId = itemId;
   }
 
-  public ItemDetailRequest items(List<Item> items) {
-    this.items = items;
-    return this;
-  }
-
-  public ItemDetailRequest addItemsItem(Item itemsItem) {
-    this.items.add(itemsItem);
+  public ItemDetailResponse item(Item item) {
+    this.item = item;
     return this;
   }
 
   /**
-   * Get items
-   * @return items
+   * Get item
+   * @return item
   **/
   @ApiModelProperty(required = true, value = "")
 
-  public List<Item> getItems() {
-    return items;
+  public Item getItem() {
+    return item;
   }
 
-  public void setItems(List<Item> items) {
-    this.items = items;
+  public void setItem(Item item) {
+    this.item = item;
   }
 
 
@@ -75,23 +64,23 @@ public class ItemDetailRequest   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ItemDetailRequest itemDetailRequest = (ItemDetailRequest) o;
-    return Objects.equals(this.itemId, itemDetailRequest.itemId) &&
-        Objects.equals(this.items, itemDetailRequest.items);
+    ItemDetailResponse itemDetailResponse = (ItemDetailResponse) o;
+    return Objects.equals(this.itemId, itemDetailResponse.itemId) &&
+        Objects.equals(this.item, itemDetailResponse.item);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(itemId, items);
+    return Objects.hash(itemId, item);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ItemDetailRequest {\n");
+    sb.append("class ItemDetailResponse {\n");
     
     sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    item: ").append(toIndentedString(item)).append("\n");
     sb.append("}");
     return sb.toString();
   }
