@@ -1,0 +1,38 @@
+{
+  "provider": {
+    "name": "SushiApplicationProvider"
+  },
+  "consumer": {
+    "name": "SushiApplicationConsumer"
+  },
+  "interactions": [
+    {
+      "provider_state": "200 Success",
+      "description": "health check up - 200 Success",
+      "request": {
+        "method": "GET",
+        "path": "/health",
+        "headers": {
+          "content-Type": "application/json; charset=UTF-8"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-Type": "application/vnd.spring-boot.actuator.v3+json"
+        },
+        "body": {
+          "status": "UP"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pact-specification": {
+      "version": "2.0.0"
+    },
+    "pact-jvm": {
+      "version": "3.1.1"
+    }
+  }
+}
